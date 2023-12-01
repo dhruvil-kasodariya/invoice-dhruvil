@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 function ItemsDeatils() {
-  const [items] =useState([{
-    item:"o",
+  let items =[{
+    item:"",
     quantity:1,
     rate:0,
     amount:0
-   }])
+   }]
 
  const [itemsDeatils,setItemDeatils] =useState(items);
 
@@ -62,7 +62,7 @@ function ItemsDeatils() {
                     <input type='number' name="rate" defaultValue={item.rate} onChange={(e)=>handleTableValue(e,index)}/>
                   </td>
                   <td>
-                    <input type='number' name="amount" defaultValue={item.quantity*item.rate} onChange={(e)=>handleTableValue(e,index)}/>
+                   {item.quantity*item.rate}
                   </td>
                 </tr>
                 )
